@@ -1,6 +1,6 @@
 #-*- coding: UTF-8 -*- 
 '''
-将京东手机页面商品的图片下载到本地
+将京东手机页面商品的图片下载到本地，python版本2.7
 '''
 import re
 import urlparse
@@ -48,7 +48,6 @@ def download(url,user_agent='wswp',proxy=None, num_retries=2):
                 html = download(url, user_agent, proxy, num_retries-1)
     return html
 
-#---------------#
 if __name__ =="__main__":
 
     headers = ('User-Agent','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11')
@@ -70,7 +69,5 @@ if __name__ =="__main__":
                     print img
                 #下载图片到本地
                 urllib.urlretrieve(img,'F:\pythonProject\jd\pic\p%s-%s.jpg'%(i,j+1)) 
-                    
-#    img = "https:" + tree.cssselect('img.err-product')[0].get('src')
         except:
             continue
