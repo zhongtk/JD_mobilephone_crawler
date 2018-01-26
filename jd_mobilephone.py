@@ -1,6 +1,7 @@
 #-*- coding: UTF-8 -*- 
 '''
 将京东手机页面商品的图片下载到本地，python版本2.7
+Reference: "Web Scraping with Python" 中文版：用Python写网络爬虫
 '''
 import re
 import urlparse
